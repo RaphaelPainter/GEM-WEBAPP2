@@ -1,54 +1,70 @@
-<template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+<template lang="html">
+  <div class="wrapper">
+    <!-- <button class="change__style" @click="changeStyle()">Change Style</button> -->
+    <tabs :mode="mode">
+      <tab title="Accueil">
+        <div class="wrapper-inside-tab">
+          Bienvenue sur l'application web du GEM 44 !
+        </div>
+      </tab>
+      <tab title="Tab 2">Hello From Tab 2</tab>
+    </tabs>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-};
+  import Tab from './components/Tab'
+  import Tabs from './components/Tabs'
+
+  export default {
+    components: {
+      Tab,
+      Tabs
+    },
+    data () {
+      return {
+        mode: 'dark'
+      }
+    },
+    methods: {
+      changeStyle () {
+        if (this.mode === 'dark') {
+          this.mode = 'light'
+        } else {
+          this.mode = 'dark'
+        }
+      }
+    }
+  }
 </script>
 
-<style>
-body {
-  margin: 0;
-}
+<style lang="css">
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+  }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+  .tabs__dark{
+    padding:20px;
+  }
 
-main {
-  text-align: center;
-  margin-top: 40px;
-}
+  .wrapper-inside-tab{
+    padding: 20px;
+  }
 
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+  }
 
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
+  .change__style {
+    background-color: #eee;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
 </style>
