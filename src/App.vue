@@ -4,6 +4,7 @@
     <tabs :mode="mode">
       <tab title="Accueil">
         <div class="wrapper-inside-tab">
+          {{ count }}
           Bienvenue sur l'application web du GEM 44 !
         </div>
       </tab>
@@ -15,6 +16,9 @@
 <script>
   import Tab from './components/Tab'
   import Tabs from './components/Tabs'
+
+import {store} from './store/index';
+import {mapState } from "vuex"
 
   export default {
     components: {
@@ -34,7 +38,10 @@
           this.mode = 'dark'
         }
       }
-    }
+    },
+      computed: {
+    ...mapState("commonStore", ["count"])
+  },
   }
 </script>
 
