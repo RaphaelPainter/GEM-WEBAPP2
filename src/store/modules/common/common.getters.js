@@ -1,3 +1,5 @@
 export default {
-    count: 0
+    apiHealth: function(state) {
+        return `${state.apiHealth}`;
+    }
 }

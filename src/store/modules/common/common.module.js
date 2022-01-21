@@ -5,8 +5,5 @@ import mutations from "./common.mutations"
 
 export default {
     namespaced: true,
-    state,
-    actions,
-    getters,
-    mutations
+    state
 }

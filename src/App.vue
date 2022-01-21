@@ -4,12 +4,13 @@
     <tabs :mode="mode">
       <tab title="Accueil">
         <div class="wrapper-inside-tab">
-          <!-- {{ count }} -->
           Bienvenue sur l'application web du GEM 44 !
         </div>
       </tab>
-      <tab title="Activités">
-
+      <tab title="DEBUG">
+         <div class="wrapper-inside-tab">
+           apiHealth: {{ apiHealth }}
+        </div>
       </tab>
     </tabs>
   </div>
@@ -19,7 +20,6 @@
   import Tab from './components/Tab'
   import Tabs from './components/Tabs'
 
-import {store} from './store/index';
 import {mapState } from "vuex"
 
   export default {
@@ -27,22 +27,17 @@ import {mapState } from "vuex"
       Tab,
       Tabs
     },
+    
     data () {
       return {
         mode: 'dark'
       }
     },
-    methods: {
-      changeStyle () {
-        if (this.mode === 'dark') {
-          this.mode = 'light'
-        } else {
-          this.mode = 'dark'
-        }
-      }
-    },
-      computed: {
-    ...mapState("commonStore", ["count"])
+   
+    computed: {
+    apiHealth () {
+	    return this.$store.state.commonStore.apiHealth
+    }
   },
   }
 </script>
