@@ -4,11 +4,13 @@
     <tabs :mode="mode">
       <tab title="Accueil">
         <div class="wrapper-inside-tab">
-          {{ count }}
+          <!-- {{ count }} -->
           Bienvenue sur l'application web du GEM 44 !
         </div>
       </tab>
-      <tab title="Tab 2">Hello From Tab 2</tab>
+      <tab title="Activités">
+
+      </tab>
     </tabs>
   </div>
 </template>
