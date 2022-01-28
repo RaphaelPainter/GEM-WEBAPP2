@@ -19,8 +19,8 @@
 <script>
   import Tab from './components/Tab'
   import Tabs from './components/Tabs'
-
-import {mapState } from "vuex"
+  import store from "@/store"
+import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
 
   export default {
     components: {
@@ -33,13 +33,20 @@ import {mapState } from "vuex"
         mode: 'dark'
       }
     },
-   
-    computed: {
-    apiHealth () {
-	    return this.$store.state.commonStore.apiHealth
-    }
-  },
+   computed: {
+    ...mapState("commonStore", [
+      "apiHealth"
+    ])},
+   methods: {
+    ...mapActions("commonStore", [
+      "setApiHealth_action"
+    ],
+    ...mapMutations([
+      'setApiHealth_mutation'
+    ])),
+   }
   }
+  store.dispatch("commonStore/setApiHealth_action")
 </script>
 
 <style lang="css">

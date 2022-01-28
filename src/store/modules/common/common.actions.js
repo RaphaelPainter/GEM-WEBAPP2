@@ -1,5 +1,6 @@
 export default {
-    get_apiHealth() {
-        return "blarg"
+    setApiHealth_action({ commit, dispatch }) {
+        console.log("bla")
+        commit("setApiHealth_mutation", "changed")
     }
 }
