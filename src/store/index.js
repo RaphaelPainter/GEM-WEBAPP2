@@ -2,6 +2,9 @@ import Vue from "vue"
 import Vuex from "vuex"
 import commonStore from "./modules/common/common.module"
 
+
+const opts = {}
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({

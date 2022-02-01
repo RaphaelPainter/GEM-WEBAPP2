@@ -6,13 +6,23 @@ import router from './router';
 import store from './store/index';
 import Vuex from "vuex";
 
+import vuetify, {
+} from 'vuetify'
+
 Vue.config.productionTip = false;
 Vue.use(Vuex)
+Vue.use(vuetify)
+
+import { VuejsDatatableFactory } from 'vuejs-datatable';
+
+Vue.use( VuejsDatatableFactory );
     /* eslint-disable no-new */
 new Vue({
+    vuetify: new vuetify(),
     el: '#app',
     router,
     template: '<App/>',
     components: { App },
-    store
-});
+    store,
+     render: h => h(App)
+})

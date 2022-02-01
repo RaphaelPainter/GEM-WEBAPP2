@@ -10,7 +10,9 @@
       <tab title="DEBUG">
          <div class="wrapper-inside-tab">
            apiHealth: {{ apiHealth }}
+           <users/>
         </div>
+
       </tab>
     </tabs>
   </div>
@@ -19,18 +21,21 @@
 <script>
   import Tab from './components/Tab'
   import Tabs from './components/Tabs'
+  import users from './components/users'
   import store from "@/store"
-import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
+  import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
 
   export default {
     components: {
       Tab,
-      Tabs
+      Tabs,
+      users
     },
-    
+
     data () {
       return {
-        mode: 'dark'
+        mode: 'dark',
+
       }
     },
    computed: {
@@ -50,8 +55,9 @@ import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
 </script>
 
 <style lang="css">
+
+
   * {
-    margin: 0;
     padding: 0;
     font-family: 'Karla', sans-serif;
   }
@@ -59,6 +65,8 @@ import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
   .tabs__dark{
     padding:20px;
   }
+
+
 
   .wrapper-inside-tab{
     padding: 20px;
