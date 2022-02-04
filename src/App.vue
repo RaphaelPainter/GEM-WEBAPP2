@@ -62,6 +62,8 @@
     font-family: 'Karla', sans-serif;
   }
 
+ 
+
   .tabs__dark{
     padding:20px;
   }
