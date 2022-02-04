@@ -8,10 +8,12 @@
         :search="search"
       >
         <template v-slot:top>
-          <v-text-field
+          <input
             v-model="search"
             class="mx-4"
-          ></v-text-field>
+            placeholder="Rechercher par nom"
+            autocomplete="off"
+          ></input>
         </template>
       </v-data-table>
       </div>

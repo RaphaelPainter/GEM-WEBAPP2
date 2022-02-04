@@ -9,7 +9,7 @@
       </tab>
       <tab title="DEBUG">
          <div class="wrapper-inside-tab">
-           apiHealth: {{ apiHealth }}
+           <!--  apiHealth: {{ apiHealth }} -->
            <users/>
         </div>
 
