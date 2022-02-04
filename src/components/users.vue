@@ -13,7 +13,7 @@
             class="mx-4"
             placeholder="Rechercher par nom"
             autocomplete="off"
-          ></input>
+          >
         </template>
       </v-data-table>
       </div>
