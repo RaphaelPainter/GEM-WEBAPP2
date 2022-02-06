@@ -21,11 +21,8 @@
 
 <script>
 
-
-import axios from 'axios';
-
   import store from "@/store"
-  import { mapGetters, mapActions, mapState,mapMutations } from "vuex"
+  import { mapActions, mapState,mapMutations } from "vuex"
 
 export default {
 
@@ -75,10 +72,28 @@ export default {
   store.dispatch("commonStore/setApiHealth_action")
   this.users = store.state.commonStore.apiHealth;
   console.log(this.users)
+
+
+  document.addEventListener("DOMContentLoaded", function(e) {
+    var list = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-left theme--light");
+    list.item(0).innerHTML = "<===";
+    list = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-right theme--light");
+    list.item(0).innerHTML = "===>"
+     })
+
 </script>
 
 <style lang="css">
  table:first-child {
     width:100%;
 }
+
+#input-13{
+  display: none;
+}
+
+.v-data-footer__select{
+  display: none;
+}
+
 </style>
