@@ -96,4 +96,20 @@ export default {
   display: none;
 }
 
+.v-data-footer__icons-before{
+  display: inline;
+}
+
+.v-data-footer__icons-after{
+  display: inline;
+}
+
+.text-start{
+  text-align: left;
+}
+
+col{
+  width: 300px;
+}
+
 </style>
