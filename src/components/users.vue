@@ -75,11 +75,13 @@ export default {
 
 
   document.addEventListener("DOMContentLoaded", function(e) {
-    var list = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-left theme--light");
-    list.item(0).innerHTML = "<===";
-    list = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-right theme--light");
-    list.item(0).innerHTML = "===>"
-     })
+    var elementList = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-left theme--light");
+    elementList.item(0).innerHTML = "<---";
+    elementList = document.getElementsByClassName("v-icon notranslate mdi mdi-chevron-right theme--light");
+    elementList.item(0).innerHTML = "--->"
+
+
+  })
 
 </script>
 
