@@ -88,4 +88,14 @@
     margin-bottom: 10px;
     padding: 5px;
   }
+
+  body{
+    margin: 0px;
+    font-size: 20px;
+  }
+
+  input{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 </style>

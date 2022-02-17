@@ -41,19 +41,25 @@ export default {
     headers () {
       return [
         {
-          text: 'Nom-Prénom',
+          text: 'Nom',
           align: 'start',
           sortable: false,
-          value: 'name',
+          value: 'Nom',
+        },
+        {
+          text: 'Prénom',
+          align: 'start',
+          sortable: false,
+          value: 'Prénom',
         },
         {
           text: 'Email',
           align: 'start',
           sortable: false,
-          value: 'email',
+          value: 'Email',
         },
         {
-          text: 'date de création',
+          text: 'Date création compte',
           align: 'start',
           sortable: false,
           value: 'created',
@@ -86,6 +92,37 @@ export default {
 </script>
 
 <style lang="css">
+
+.v-data-table-header{
+  background-color: rgb(10, 30, 48);
+}
+
+tr{
+  height: 55px;
+}
+
+td{
+    border-top: 1px solid rgb(77, 88, 112);
+}
+
+
+.v-data-table{
+  height: 650px;
+}
+
+.tabs__dark{
+  height: 800px;
+}
+
+.tab{
+     height: 800Px;
+}
+
+
+.v-data-table__wrapper{
+  height: 100%;
+}
+
  table:first-child {
     width:100%;
 }
@@ -112,6 +149,10 @@ export default {
 
 col{
   width: 300px;
+}
+
+button{
+  padding: 10px;
 }
 
 </style>
