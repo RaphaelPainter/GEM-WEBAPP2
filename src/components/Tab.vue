@@ -20,4 +20,11 @@
   }
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+
+.v-data-table{
+      display: flex;
+      flex-direction: column;
+}
+
+</style>
