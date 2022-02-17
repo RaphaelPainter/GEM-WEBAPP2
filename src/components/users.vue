@@ -107,7 +107,7 @@ td{
 
 
 .v-data-table{
-  height: 650px;
+  height: 750px;
 }
 
 .tabs__dark{
