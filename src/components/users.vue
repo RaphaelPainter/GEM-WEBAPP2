@@ -144,7 +144,7 @@ td{
 }
 
 .text-start{
-  text-align: left;
+  text-align: center;
 }
 
 col{
@@ -153,6 +153,15 @@ col{
 
 button{
   padding: 10px;
+}
+
+tr {
+  transition-duration: 0s;
+}
+
+tbody tr:hover{
+  background-color: rgb(79, 99, 144); 
+  color: white;
 }
 
 </style>
